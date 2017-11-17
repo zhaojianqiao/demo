@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/login.css">
+	<link rel="stylesheet" href="css/loaders.css">
+	<title>Canvas</title>
+</head>
+<body>
+<div class='login' id="login">
+	<div class='login_title'>
+		<span>账号登录</span>
+	</div>
+	<div class='login_fields'>
+		<div class='login_fields__user'>
+			<div class='icon'>
+				<img alt="" src='images/user_icon_copy.png'>
+			</div>
+			<input name="login" placeholder='用户名' maxlength="16" type='text' autocomplete="off"  v-model="name"/>
+			<div class='validation'>
+				<img alt="" src='images/tick.png'>
+			</div>
+		</div>
+		<div class='login_fields__password'>
+			<div class='icon'>
+				<img alt="" src='images/lock_icon_copy.png'>
+			</div>
+			<input name="pwd" placeholder='密码' maxlength="16" type='password' autocomplete="off" v-model="password">
+			<div class='validation'>
+				<img alt="" src='images/tick.png'>
+			</div>
+		</div>
+		<div class='login_fields__submit'>
+			<input type='button' value='登录' @click="btn">
+		</div>
+	</div>
+	<div class='success'>
+	</div>
+	<div class='disclaimer'>
+		<p>欢迎登陆前台登录页面</p>
+	</div>
+</div>
+<!--认证中-->
+<div class='authent'>
+	<div class="loader" style="height: 44px;width: 44px;margin-left: 28px;">
+		<div class="loader-inner ball-clip-rotate-multiple">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+	<p>认证中...</p>
+</div>
+<!--cancel-->
+<div class="x-mark" @click="cancel">
+	<div class="container">
+		<div class="left"></div>
+		<div class="right"></div>
+	</div>
+</div>
+<!--welcome-->
+<div class="container">
+	<h1>welcome to Canvas</h1>
+</div>
+</body>
+<script type="text/javascript" src="lib/vue.min.js"></script>
+<script type="text/javascript" src="lib/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src='lib/TweenMax.min.js'></script>
+<script type="text/javascript" src='lib/three.min.js'></script>
+<script type="text/javascript" src="js/login.js"></script>
+</html>

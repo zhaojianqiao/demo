@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML Drag and Drop</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="./GoJS/assets/css/jquery-ui.min.css" />
+<style>
+    ul{
+      padding: 10px;
+    }
+    li{
+      list-style: none;
+      padding-left: 40px;
+      height: 40px;
+      margin-bottom: 10px;
+    }
+    .fl{
+      background: red;
+      height: 100%;
+      width: 20%;
+      display: inline-block;
+      float: left;
+    }
+    .fr{
+      float: right;
+      height: 100%;
+      width: 80%;
+      text-align: center;
+      line-height: 40px;
+    }
+  
+  #myItems{
+    width: 20%;
+     display: inline-block;
+  }
+  #myDiagramDiv{
+    width: 80%;
+    display:inline-block;
+  }
+  #myDiagramDiv > textarea{
+    height: 52px;
+  }
+</style>
+</head>
+<body>
+<div id="sample">
+  <div style="width:100%; white-space:nowrap;">
+      <div id="myItems" style="border: solid 1px black; height: 300px">
+        <ul>
+          <li><div class="fl"><img src="" alt=""></div><div class="fr">dasdaasd</div></li>
+          <li><div class="fl"></div><div class="fr">FTB输入</div></li>
+          <li><div class="fl"></div><div class="fr">744564861</div></li>
+          <li><div class="fl"></div><div class="fr">415489621 </div></li>
+        </ul>
+      </div>
+      <div id="myDiagramDiv" style="border: solid 1px black; height: 300px"></div>
+  </div>
+</div>
+
+
+<form id="mySaveBtn">
+    <input type="text" id="text">
+    <input type="text" id="title"> 
+    <input type="text" id="dis">
+    <input type="button" value="改变" id="gb">
+</form>
+<button id="SaveButton" click="save()">save</button>
+<button id="LoadButton">load</button>
+<div id="infoDragable" class="draggable">
+<div id="infoDragableHandle">info</div>
+  <div id="myInfo"></div>
+</div>
+<textarea name="mySavedModel" id="mySavedModel" cols="30" rows="10" style="width:100%;height:300px">
+{ "class": "go.GraphLinksModel",
+  "linkFromPortIdProperty": "fromPort",
+  "linkToPortIdProperty": "toPort",
+  "nodeDataArray": [
+ ],
+  "linkDataArray": [
+ ]}
+ ]}
+</textarea>
+</body>
+<script src="./GoJS/assets/js/jquery.min.js"></script>
+<script src="./GoJS/assets/js/jquery-ui.min.js"></script>
+<script src="./GoJS/release/go.js"></script>
+<script src="./GoJS/extensions/DataInspector.js"></script>
+<script src='./index.js'></script>
+</html>
